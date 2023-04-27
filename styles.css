@@ -16,6 +16,12 @@ body {
     position: relative;
 }
 
+.title {
+    position: absolute;
+    top: 20px;
+    text-align: center;
+}
+
 .score {
     position: absolute;
     font-size: 3vmin;

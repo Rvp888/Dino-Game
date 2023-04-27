@@ -23,6 +23,10 @@ body {
     right: 1vmin;
 }
 
+.score::before {
+    content: 'Score: ';
+}
+
 .start-screen {
     position: absolute;
     font-size: 5vmin;

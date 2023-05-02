@@ -76,6 +76,8 @@ function handleStart() {
 }
 
 function handleLose() {
+    gameOverSound.play();
+    musicSound.pause();
     setDinoLose();
     setTimeout(() => {
         document.addEventListener("keydown", handleStart, { once: true });

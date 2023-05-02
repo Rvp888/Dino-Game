@@ -2,6 +2,10 @@ import { setupGround, updateGround } from "./ground.js";
 import { setupDino, updateDino, getDinoRect, setDinoLose } from "./dino.js";
 import { setupCactus, updateCactus, getCactusRects } from "./cactus.js";
 
+const gameOverSound = new Audio("../music/gameover.mp3");
+const jumpSound = new Audio("../music/move.mp3");
+const musicSound = new Audio("../music/music.mp3");
+
 const WORLD_WIDTH = 100;
 const WORLD_HEIGHT = 30;
 const SPEED_SCALE_INCREASE = 0.00001;
@@ -68,6 +72,7 @@ function handleStart() {
   setupCactus();
   startScreenElem.classList.add("hide");
   window.requestAnimationFrame(update);
+  musicSound.play();
 }
 
 function handleLose() {
